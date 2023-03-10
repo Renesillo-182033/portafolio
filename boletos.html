@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/jpg" href="cinepolis.png"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletos</title>
+    <style>body{background-size: 100% 100%; background-repeat: no-repeat; background-attachment: fixed; opacity: 100;}</style>
+</head>
+
+<body background="simpson.png">
+    <center><img src="Cine.png" width="600px" height="200px"></center>
+    <h1 align="left">S.L.P. S.L.P.</h1>
+    <br><hr width="75%"> <br>
+
+    <form method="post" enctype="texte/plain">
+        <fieldset style="background-color:rgb(69, 69, 182);">
+        
+        <legend style="background-color:black;">Informacion del cliente</legend>
+
+        <table align="center">
+            <tr>
+        <th width="25%"><label for="usuario">Nombre de usuario:</label>
+        <input type="text" name="usuario" id="usuario" maxlength="12" placeholder="usuario" size="10" title="nombre de usuario"/><br></th>
+
+        <th width="25%"><label for="password">Contraseña:</label>
+        <input name="pass" type="password" placeholder="password" size="15" maxlength="20"></th>
+        </tr>
+
+        <tr>
+            <th align="center" width="25%"><label for="fechan">Fecha</label>
+            <input type="date" name="fechav" id="fechav" placeholder="Fecha de venta" /></th>
+
+            <th>
+                <label>Hora</label>
+                <input type="time" name="hora" id="hora"/>
+            </th>
+            
+        </tr>
+        </table>
+
+        <table align="center">
+        <tr>
+            <th align="center" width="25%"><h3>Sucursal</h3>
+                <select name="Cine">
+                <optgroup label="Tipo"><br>
+                <option>Plaza SL</option><br>
+                <option>Plaza Sendero</option><br>
+                <option>Plaza el Dorado</option><br>
+                <option>Plaza Citadina</option><br>
+                <option>Plaza Tangamanga</option><br>
+                </optgroup>
+                </select></th>
+
+                <th align="center" width="25%"><h3>Sala</h3>
+                    <select name="Cine">
+                    <optgroup label="Tipo"><br>
+                    <option>Sala 1</option><br>
+                    <option>Sala 2</option><br>
+                    <option>Sala 3</option><br>
+                    <option>Sala 4</option><br>
+                    <option>Sala 5</option><br>
+                    </optgroup>
+                    </select></th>
+
+            <th align="center" width="25%"><h3>Pago</h3>
+                <select name="Pago">
+                <optgroup label="Tipo"><br>
+                <option>Efectivo</option><br>
+                <option>Tarjeta de credito</option><br>
+                <option>Tarjeta de debito</option><br>
+                <option>Puntos infonavit</option><br>
+                </optgroup>
+                </select></th>
+
+                <th align="center" width="25%"><h3>Pelicula</h3>
+                    <select name="Peli">
+                    <optgroup label="Tipo"><br>
+                    <option>Ant-Man</option><br>
+                    <option>Avatar</option><br>
+                    <option>Creed 3</option><br>
+                    <option>Gato con Botas 2</option><br>
+                    <option>Scream 6</option><br>
+                    <option>Shrek 2</option><br>
+                    <option>Spider-Man: NWH</option><br>
+                    <option>Spider-Man: ASV</option><br>
+                    <option>Minions: Nace un villano</option><br>
+                    <option>Black Panther: WF</option><br>
+                    <option>Jurassic World: Dominio</option><br>
+                    <option>Star Wars</option><br>
+                    </optgroup>
+                    </select></th>
+        </tr>
+        </table>
+        <br>
+        <br>
+
+        <h1 align="center">Asientos</h1>
+        <table align="center">
+        <tr>
+        <th width="250"><input name="casilla1" type="checkbox" value="asiento"><label>A1</label></th>
+        <th width="250"><input name="casilla2" type="checkbox" value="asiento" ><label>A2</label></th>
+        <th width="250"><input name="casilla2" type="checkbox" value="asiento" ><label>A3</label></th>
+        <th width="250"><input name="casilla2" type="checkbox" value="asiento" ><label>A4</label></th>
+        <th width="250"><input name="casilla2" type="checkbox" value="asiento" ><label>A5</label></th>
+        </tr>
+        <tr>
+        <th><input name="casilla1" type="checkbox" value="asiento"><label>B1</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>B2</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>B3</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>B4</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>B5</label></th>
+        </tr>
+        <tr>
+        <th><input name="casilla1" type="checkbox" value="asiento"><label>C1</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>C2</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>C3</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>C4</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>C5</label></th>
+        </tr>
+        <tr>
+        <th><input name="casilla1" type="checkbox" value="asiento"><label>D1</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>D2</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>D3</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>D4</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>D5</label></th>
+        </tr>
+        <tr>
+        <th><input name="casilla1" type="checkbox" value="asiento"><label>E1</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>E2</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>E3</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>E4</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>E5</label></th>
+        </tr>
+        <tr>
+        <th><input name="casilla1" type="checkbox" value="asiento"><label>F1</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>F2</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>F3</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>F4</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>F5</label></th>
+        </tr>
+        <tr>
+        <th><input name="casilla1" type="checkbox" value="asiento"><label>G1</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>G2</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>G3</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>G4</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>G5</label></th>
+        </tr>
+        <tr>
+        <th><input name="casilla1" type="checkbox" value="asiento"><label>H1</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>H2</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>H3</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>H4</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>H5</label></th>
+        </tr>
+        <tr>
+        <th><input name="casilla1" type="checkbox" value="asiento"><label>I1</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>I2</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>I3</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>I4</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>I5</label></th>
+        </tr>
+        <tr>
+        <th><input name="casilla1" type="checkbox" value="asiento"><label>J1</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>J2</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>J3</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>J4</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>J5</label></th>
+        </tr>
+        <tr>
+        <th><input name="casilla1" type="checkbox" value="asiento"><label>K1</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>K2</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>K3</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>K4</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>K5</label></th>
+        </tr>
+        <tr>
+        <th><input name="casilla1" type="checkbox" value="asiento"><label>L1</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>L2</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>L3</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>L4</label></th>
+        <th><input name="casilla2" type="checkbox" value="asiento" ><label>L5</label></th>
+        </tr> 
+        </table>
+        <br>
+        <br>
+
+        <input name="boton" type="submit" value="Enviar">
+        <input name="boton" type="reset" value="Borrar">
+
+        </fieldset>
+        </form>
+
+        <br>
+        <br>
+
+        <center><img src="es cine.jpg"></center>
+    
+</body>
+</html>
