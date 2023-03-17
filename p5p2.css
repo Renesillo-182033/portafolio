@@ -1,0 +1,7 @@
+body { background-color:gray; }
+fieldset {background-color:gray;}
+table { align: center;}
+#uno, #dos, #tres, #cuatro  {text-align: center;}
+#tit { font-size: 75px; text-align:center ; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;}
+#subtit {font-size: 35px; text-align: center;}
+table {width: 75%;}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="p5p2.css">
+</head>
+<body>
+
+    <h1 id="tit">Servicios de Internet y Telefonía</h1>
+    <h2 id="subtit">Contrato de servicios</h2>
+   
+    <form method="post" enctype="texte/plain">
+        <fieldset>
+       
+        <legend>Datos del cliente</legend>
+       
+        <center><table>
+        <tr>
+       
+        <th ><label for="nombre">Nombre:</label><br>
+        <input type="text" name="nombre" id="nombre" maxlength="25" /></th>
+       
+        <th ><label for="ap">Apellido paterno:</label><br>
+        <input type="text" name="ap" id="ap" maxlength="25" /></th>
+       
+        <th ><label for="am">Apellido materno:</label><br>
+        <input type="text" name="am" id="am" maxlength="25" /></th>
+        </tr>
+            <tr aria-colspan="3">
+            <th ><h3>Prenda:</h3>
+            <select name="Ciudad">
+            <optgroup label="Lugar"><br>
+            <option selected>San Luis Potosí</option><br>
+            <option>Matehuala</option><br>
+            <option>Cd. Valles</option><br>
+            <option>Querétaro</option><br>
+            <option>Guanajuato</option><br>
+            </optgroup>
+            </select></th></tr>
+    </table></center>
+        </fieldset>
+
+        <fieldset>
+            <legend>Servicio a contratar</legend>
+
+                        <center><table>
+                        <tr>
+                        <td><h3>Selecciona el tipo de servicio a contratar</h3></td>
+                        </tr>
+                        <tr>
+                        <td><input name="casilla1" type="checkbox" value="asiento" selected><label>Servicio de Telefonía</label></td>
+                         <td><input name="casilla1" type="checkbox" value="asiento" selected><label>Servicio de Internet</label></td>
+                    </tr>
+                    </table></center>
+                    </th>
+        </fieldset>
+
+            <fieldset>
+            <legend>Forma de pago</legend>
+            <center><table>
+                 <td>
+                <h3>Elige la forma de pago</h3>    
+                <ul>
+                <li><input type="radio" name="genero" id="genero" value="A" />
+                <label for="genero">TDC</label></li>
+                <li><input type="radio" name="genero" id="genero" value="B" />
+                <label for="genero">Tarjeta de debito</label></li>
+                <li><input type="radio" name="genero" id="genero" value="C" />
+                <label for="genero">Pago en efectivo</label></li>
+                <li><input type="radio" name="genero" id="genero" value="D" />
+                <label for="genero">Pago mediante cheque</label></li>
+                <li><input type="radio" name="genero" id="genero" value="E" />
+                <label for="genero">Transferencia bancaria</label></li>
+                <li><input type="radio" name="genero" id="genero" value="F" />
+                <label for="genero">Deposito bancario</label></li>
+                <li><input type="radio" name="genero" id="genero" value="G" />
+                <label for="genero">Pago en oxxo</label></li>
+            </ul>
+        </td>
+        </tr>
+        </table></center>
+
+            <input name="boton" type="submit" value="Enviar">
+            <input name="boton" type="reset" value="Borrar">
+            </fieldset>
+
+          
+            <h1 id="uno">Práctica 5</h1>
+            <h2 id="dos">HTML - CSS</h2>
+            <h3 id="tres">Primavera 2023</h3>
+            <h4 id="cuatro">Castillo Olvera Carlos René - 182033</h4>
+            
+
+       
+
+
+</body>
+</html>
