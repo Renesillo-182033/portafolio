@@ -1,0 +1,35 @@
+body
+{
+    background-color: skyblue;
+}
+
+h1 {
+    outline: 3px solid blue;
+}
+
+p {
+    outline: 1px dashed red;
+}
+
+.button {
+    outline: 2px dotted green;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: lightgray;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.text-input {
+    outline: 2px solid orange;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    margin: 10px;
+}
