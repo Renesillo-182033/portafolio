@@ -1,0 +1,46 @@
+body
+{
+    background-size: 100% 100%; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    opacity: 100;
+}
+
+h1
+{
+    font-size: 100px;
+    color: crimson;
+    text-align: center;
+}
+
+button
+{
+    size: 50px;
+}
+
+p
+{
+    background-color: black;
+    color: #fff;
+}
+
+.container 
+{
+  overflow: hidden;
+}
+
+.right 
+{
+  width: 10%;
+  float: right;
+  border: 1px solid #b4a803; 
+  padding: 10px; 
+  box-shadow: 2px 2px 5px #adb902;
+  background-color: #ec1414;
+}
+
+p
+{
+  color: #fff;
+  font-size: 25px;
+}
