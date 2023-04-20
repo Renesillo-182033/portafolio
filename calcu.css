@@ -1,0 +1,43 @@
+body
+{
+    background-size: 100% 100%; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    opacity: 100;
+}
+ #alumno
+ {
+    width: 10%;
+    float: right;
+    border: 1px solid #4be3f7; 
+    padding: 10px; 
+    box-shadow: 2px 2px 5px #4be3f7;
+    background-color: #1434ec;
+    color: #fff;
+    font-size: 25px;
+ }
+
+ h1
+ {
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+     display: block;
+     width: 400px;
+     padding: 20px;
+     border: 1px solid cadetblue;
+     text-align: center;
+     margin: 15px auto;
+     background: rgb(13, 4, 112);
+     -moz-border-radius: 20px 10px 40px 30px;
+     -webkit-border-radius: 20px 10px 40px 30px;
+     border-radius: 20px 10px 40px 30px;
+ 
+     -moz-box-shadow: rgb(228, 248, 224) 20px 10px 40px 30px;
+     -webkit-box-shadow: rgb(126, 96, 202) 20px 10px 40px 30px;
+     box-shadow: rgb(77, 77, 228) 20px 10px 40px 30px;
+     color: #fff;
+ }
+
+ form
+ {
+    background-color: #fff;
+ }

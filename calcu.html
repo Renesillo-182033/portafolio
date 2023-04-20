@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora 2.0</title>
+	<script src="calcu.js"></script>
+    <link href="calcu.css" rel="stylesheet" type="text/css">
+</head>
+<body background="mate.jpg">
+	<h1>Calculadora 2.0</h1>
+	<form>
+		<label for="num1">Primer número:</label>
+		<input type="number" id="num1" name="num1">
+        <br>
+		<label for="num2">Segundo número:</label>
+		<input type="number" id="num2" name="num2">
+        <br>
+		<label>Operación:</label>
+		<input type="radio" id="suma" name="operacion" value="suma">
+		<label for="suma">Suma &nbsp;</label>
+		<input type="radio" id="resta" name="operacion" value="resta">
+		<label for="resta">Resta &nbsp;</label>
+		<input type="radio" id="multiplicacion" name="operacion" value="multiplicacion">
+		<label for="multiplicacion">Multiplicación &nbsp;</label>
+		<input type="radio" id="division" name="operacion" value="division">
+		<label for="division">División &nbsp;</label>
+        <br>
+		<button type="button" onclick="calcular()">Calcular</button>
+	</form>
+	<p id="resultado"></p>
+
+    <p id="alumno">Carlos René Castillo Olvera - 182033</p>
+</body>
+</html>
