@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Gráfico</title>
+    <style>body
+    {
+        background-size: 100% 100%; 
+        background-repeat: no-repeat; 
+        background-attachment: fixed; 
+        opacity: 100;
+    }
+
+    h1
+ {
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+     display: block;
+     width: 400px;
+     padding: 20px;
+     border: 1px solid cadetblue;
+     text-align: center;
+     margin: 15px auto;
+     background: rgb(13, 4, 112);
+     -moz-border-radius: 20px 10px 40px 30px;
+     -webkit-border-radius: 20px 10px 40px 30px;
+     border-radius: 20px 10px 40px 30px;
+ 
+     -moz-box-shadow: rgb(228, 248, 224) 20px 10px 40px 30px;
+     -webkit-box-shadow: rgb(126, 96, 202) 20px 10px 40px 30px;
+     box-shadow: rgb(77, 77, 228) 20px 10px 40px 30px;
+     color: #fff;
+ }
+        </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Deportes', 'Amigos que prefieren algun deporte'],
+          ['Box',     5],
+          ['Futbol Soccer',      10],
+          ['Beisbol',  2],
+          ['Basketbol', 2],
+          ['Volibol',    7]
+        ]);
+
+        var options = {
+          title: 'Mejores deportes'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body background="deportes.webp">
+    <h1>Carlos René Castillo Olvera - 182033</h1>
+    <center><div id="piechart" style="width: 700px; height: 300px;"></div></center>
+  </body>
+</html>
