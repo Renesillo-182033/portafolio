@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RFC</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body
+    {
+        background-size: 100% 100%; 
+        background-repeat: no-repeat; 
+        background-attachment: fixed; 
+        opacity: 100;
+    }
+        h1
+ {
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+     display: block;
+     width: 400px;
+     padding: 20px;
+     border: 1px solid cadetblue;
+     text-align: center;
+     margin: 15px auto;
+     background: rgb(13, 4, 112);
+     -moz-border-radius: 20px 10px 40px 30px;
+     -webkit-border-radius: 20px 10px 40px 30px;
+     border-radius: 20px 10px 40px 30px;
+ 
+     -moz-box-shadow: rgb(228, 248, 224) 20px 10px 40px 30px;
+     -webkit-box-shadow: rgb(126, 96, 202) 20px 10px 40px 30px;
+     box-shadow: rgb(77, 77, 228) 20px 10px 40px 30px;
+     color: #fff;
+ }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input {
+      padding: 5px;
+      margin-bottom: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 5px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3e8e41;
+    }
+    #rfc {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body background="rfc.jpg">
+    <h1>Castillo Olvera Carlos René - 182033</h1><br>
+  <form id="rfc-form">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required>
+
+    <label for="apellido-paterno">Apellido paterno:</label>
+    <input type="text" id="apellido-paterno" required>
+
+    <label for="apellido-materno">Apellido materno:</label>
+    <input type="text" id="apellido-materno" required>
+
+    <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+    <input type="number" id="anio-nacimiento" placeholder="Año" min="1900" max="2023" required>
+    <input type="number" id="mes-nacimiento" placeholder="Mes" min="1" max="12" required>
+    <input type="number" id="dia-nacimiento" placeholder="Día" min="1" max="31" required>
+
+    <button type="submit">Generar RFC</button>
+  </form>
+
+  <p id="rfc"></p>
+
+ 
+
+  <script>
+    const form = document.getElementById('rfc-form');
+const rfcParagraph = document.getElementById('rfc');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const nombre = document.getElementById('nombre').value;
+  const apellidoPaterno = document.getElementById('apellido-paterno').value;
+  const apellidoMaterno = document.getElementById('apellido-materno').value;
+  const anioNacimiento = document.getElementById('anio-nacimiento').value;
+  const mesNacimiento = document.getElementById('mes-nacimiento').value;
+  const diaNacimiento = document.getElementById('dia-nacimiento').value;
+
+  const rfc = apellidoPaterno.slice(0, 2) + apellidoMaterno.slice(0, 1) + nombre.slice(0, 1) + anioNacimiento.slice(2, 4) + mesNacimiento.padStart(2, '0') + diaNacimiento.padStart(2, '0');
+
+  rfcParagraph.textContent = `Su RFC es: ${rfc}`;
+});
+
+  </script>
+</body>
+</html>
