@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Obtener ubicación actual del usuario</title>
+  <style>
+    body
+    {
+        background-size: 100% 100%; 
+        background-repeat: no-repeat; 
+        background-attachment: fixed; 
+        opacity: 100;
+    }
+        h1
+ {
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+     display: block;
+     width: 400px;
+     padding: 20px;
+     border: 1px solid cadetblue;
+     text-align: center;
+     margin: 15px auto;
+     background: rgb(13, 4, 112);
+     -moz-border-radius: 20px 10px 40px 30px;
+     -webkit-border-radius: 20px 10px 40px 30px;
+     border-radius: 20px 10px 40px 30px;
+ 
+     -moz-box-shadow: rgb(228, 248, 224) 20px 10px 40px 30px;
+     -webkit-box-shadow: rgb(126, 96, 202) 20px 10px 40px 30px;
+     box-shadow: rgb(77, 77, 228) 20px 10px 40px 30px;
+     color: #fff;
+ }
+ h2
+ {
+    background-color: #fff;
+ }
+ p
+ {
+    background-color: #fff;
+ }
+  </style>
+  <script src="https://maps.googleapis.com/maps/api/js?key=TU_CLAVE_DE_API"></script>
+  <script>
+    function obtenerUbicacion() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          var latitude = position.coords.latitude;
+          var longitude = position.coords.longitude;
+          var accuracy = position.coords.accuracy;
+          var mensaje = "Tu ubicación actual es: " + latitude + ", " + longitude + " (con precisión de " + accuracy + " metros)";
+          alert(mensaje);
+        });
+      } else {
+        alert("Lo siento, tu navegador no soporta la API Geolocation de HTML5");
+      }
+    }
+  </script>
+</head>
+<body background="gta.webp">
+    <h1>Castillo Olvera Carlos René - 182033</h1>
+  <h2>Obtener ubicación actual del usuario</h2>
+  <p>Haz clic en el siguiente botón para obtener tu ubicación actual:</p>
+  <button onclick="obtenerUbicacion()">Obtener ubicación</button>
+</body>
+</html>
