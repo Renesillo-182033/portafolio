@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Back</title>
+    <style>
+    h1
+     {
+         font-family:Verdana, Geneva, Tahoma, sans-serif;
+         display: block;
+         width: 400px;
+         padding: 20px;
+         border: 1px solid cadetblue;
+         text-align: center;
+         margin: 15px auto;
+         background: rgb(13, 4, 112);
+         -moz-border-radius: 20px 10px 40px 30px;
+         -webkit-border-radius: 20px 10px 40px 30px;
+         border-radius: 20px 10px 40px 30px;
+     
+         -moz-box-shadow: rgb(228, 248, 224) 20px 10px 40px 30px;
+         -webkit-box-shadow: rgb(126, 96, 202) 20px 10px 40px 30px;
+         box-shadow: rgb(77, 77, 228) 20px 10px 40px 30px;
+         color: #fff;
+     }
+     </style>
+</head>
+<body>
+    <h1>Castillo Olvera Carlos René - 182033</h1>
+    <h2>The Window History Object</h2>
+    <h3>Ejemplo para pagina de proyecto</h3>
+
+    <button onclick="history.back()">Go Back</button>
+    <button onclick="history.forward()">Go Forward</button>
+    <button onclick="history.go(-2)">Go 2 Pages Back</button>
+
+
+    <p>
+        Clicking "Go Back" will not result in action, because there is no previous page in the history list.
+    </p><br>
+
+    <text>
+        -¿Que es esta API?<br>
+
+        La API de historial brinda acceso al historial de sesiones del navegador (que no debe confundirse 
+        con el historial de WebExtensions) a través del objeto global de historial. Expone métodos y 
+        propiedades útiles que le permiten navegar hacia adelante y hacia atrás a través del historial del 
+        usuario y manipular el contenido de la pila del historial.<br>
+
+        -Implementacion<br>
+
+        En nuestro proyecto se puede implementar para navegar en paginas anteriores o posteriores de la 
+        misma pagina, como si fuese la misma barra de navegador.<br>
+    </text>
+
+</body>
+</html>
