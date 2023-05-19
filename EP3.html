@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Examen Práctico - P3</title>
+    <style>
+        body {
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            opacity: 100;
+        }
+
+        h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: block;
+            width: 400px;
+            padding: 20px;
+            border: 1px solid cadetblue;
+            text-align: center;
+            margin: 15px auto;
+            background: rgb(13, 4, 112);
+            -moz-border-radius: 20px 10px 40px 30px;
+            -webkit-border-radius: 20px 10px 40px 30px;
+            border-radius: 20px 10px 40px 30px;
+            -moz-box-shadow: rgb(228, 248, 224) 20px 10px 40px 30px;
+            -webkit-box-shadow: rgb(126, 96, 202) 20px 10px 40px 30px;
+            box-shadow: rgb(77, 77, 228) 20px 10px 40px 30px;
+            color: #fff;
+        }
+
+        img {
+            text-align: center;
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body background="fondo-ep3.jpg">
+    <h1>Castillo Olvera Carlos René - 182033</h1>
+    <h2>Descuento de cumpleaños</h2>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br><br>
+        <label for="cumpleaños">Fecha de cumpleaños:</label>
+        <input type="date" id="cumpleaños" name="cumpleaños"><br><br>
+        <button type="button" onclick="verificarCumpleaños()">Revisar</button>
+    </form>
+    <div id="descuento"></div>
+
+    <script>
+        function verificarCumpleaños() {
+            var nombre = document.getElementById("nombre").value;
+            var cumpleaños = new Date(document.getElementById("cumpleaños").value);
+            var hoy = new Date();
+            var mesActual = hoy.getMonth() + 1;
+
+            if (cumpleaños.getMonth() + 1 === mesActual) {
+                var textoDescuento = "¡Feliz cumpleaños, " + nombre + "! Obtienes un 10% de descuento.";
+                var imagenDescuento = "<img src='off.webp' alt='Descuento de cumpleaños'>";
+                document.getElementById("descuento").innerHTML = textoDescuento + "<br>" + imagenDescuento;
+            } else {
+                document.getElementById("descuento").innerHTML = "Lo siento, " + nombre + ", no tienes el descuento.";
+            }
+        }
+    </script>
+</body>
+</html>
