@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog de Videojuegos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+    background-size: 100% 100%; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    opacity: 100;
+    color: aliceblue;
+}
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+nav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.active {
+    background-color:blueviolet;
+    color: white;
+}
+
+h1
+{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: block;
+    width: 400px;
+    padding: 20px;
+    border: 1px solid cadetblue;
+    text-align: center;
+    margin: 15px auto;
+    background: rgb(13, 4, 112);
+    -moz-border-radius: 20px 10px 40px 30px;
+    -webkit-border-radius: 20px 10px 40px 30px;
+    border-radius: 20px 10px 40px 30px;
+
+    -moz-box-shadow: rgb(228, 248, 224) 20px 10px 40px 30px;
+    -webkit-box-shadow: rgb(126, 96, 202) 20px 10px 40px 30px;
+    box-shadow: rgb(77, 77, 228) 20px 10px 40px 30px;
+}
+    </style>
+    <script>
+        function enviarPreguntas() {
+            var preguntas = document.getElementsByClassName("pregunta");
+            var nombre = document.getElementById("nombre").value;
+            var contenidoCorreo = "";
+            for (var i = 0; i < preguntas.length; i++) {
+                contenidoCorreo += "Pregunta " + (i+1) + ": " + preguntas[i].value + "%0D%0A";
+            }
+            var link = "mailto:182033@upslp.edu.mx?subject=Preguntas%20del%20Blog&body=Nombre:%20" + encodeURIComponent(nombre) + "%0D%0A%0D%0A" + contenidoCorreo;
+            window.location.href = link;
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="blog.css">
+
+</head>
+<body onload="mostrarComentarios()" background="fondito.jpg">
+        <h1>Blog de comentarios</h1>
+
+        <nav>
+            <a  href="file:///C:/Users/MIGRANTES/Documents/renecito/ProyectoWeb/Proyecto.html">Nuevos lanzamientos</a>
+            <a href="file:///C:/Users/MIGRANTES/Documents/renecito/ProyectoWeb/noticias.html">Noticias actuales</a>
+            <a href="#">Foro de debate</a>
+            <a href="file:///C:/Users/MIGRANTES/Documents/renecito/ProyectoWeb/preguntas.html">Preguntas</a>
+            <a class="active" href="file:///C:/Users/MIGRANTES/Documents/renecito/ProyectoWeb/blog.html">Blog</a>
+            <a href="file:///C:/Users/MIGRANTES/Documents/renecito/ProyectoWeb/trivia.html">Trivia</a>
+            <a href="">ChatBot</a>
+            <a href="">Tiendas</a>
+        </nav>
+        
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre"><br>
+            
+            <p>¿Qué te pareció o qué te parece el nuevo Resident Evil?</p>
+            <textarea class="pregunta"></textarea><br>
+            
+            <p>¿Crees que salga un trailer de GTA 6 este año?</p>
+            <textarea class="pregunta"></textarea><br>
+            
+            <p>¿Qué esperas del próximo Jedi Survivor?</p>
+            <textarea class="pregunta"></textarea><br>
+            
+            <p>¿Qué debería hacer Warzone para no morir?</p>
+            <textarea class="pregunta"></textarea><br>
+            
+            <button type="button" onclick="enviarPreguntas()">Enviar</button>
+        </form>
+</body>
+</html>
