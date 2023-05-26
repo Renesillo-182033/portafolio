@@ -51,6 +51,24 @@ h1
     -webkit-box-shadow: rgb(126, 96, 202) 20px 10px 40px 30px;
     box-shadow: rgb(77, 77, 228) 20px 10px 40px 30px;
 }
+            .container {
+      display: flex;
+      flex-direction: row;
+    }
+    .form {
+      flex: 1;
+      padding: 10px;
+    }
+    .comments {
+      flex: 1;
+      padding: 10px;
+    }
+    .comment {
+      margin-bottom: 10px;
+    }
+    .comment span.username {
+      font-weight: bold;
+    }
     </style>
     <script>
         function enviarPreguntas() {
@@ -99,5 +117,57 @@ h1
             
             <button type="button" onclick="enviarPreguntas()">Enviar</button>
         </form>
+    <br><br><br><br><br><br><br>
+    
+    <script>
+    function enviarComentario() {
+      var nombreUsuario = document.getElementById("nombre-usuario").value;
+      var comentario = document.getElementById("comentario").value;
+      var comentariosContainer = document.getElementById("comentarios-container");
+      
+      var comentarioElement = document.createElement("div");
+      comentarioElement.classList.add("comment");
+      comentarioElement.innerHTML = '<span class="username">' + nombreUsuario + ':</span> ' + comentario;
+      
+      comentariosContainer.appendChild(comentarioElement);
+      
+      var comentariosGuardados = JSON.parse(localStorage.getItem("comentarios")) || [];
+      comentariosGuardados.push({ nombreUsuario: nombreUsuario, comentario: comentario });
+      localStorage.setItem("comentarios", JSON.stringify(comentariosGuardados));
+      
+      document.getElementById("nombre-usuario").value = "";
+      document.getElementById("comentario").value = "";
+    }
+
+    // Cargar comentarios almacenados en el almacenamiento local al cargar la página
+    window.onload = function() {
+      var comentariosGuardados = JSON.parse(localStorage.getItem("comentarios")) || [];
+      var comentariosContainer = document.getElementById("comentarios-container");
+
+      comentariosGuardados.forEach(function(comentarioGuardado) {
+        var comentarioElement = document.createElement("div");
+        comentarioElement.classList.add("comment");
+        comentarioElement.innerHTML = '<span class="username">' + comentarioGuardado.nombreUsuario + ':</span> ' + comentarioGuardado.comentario;
+
+        comentariosContainer.appendChild(comentarioElement);
+      });
+    };
+  </script>
+    
+    <div class="container">
+    <div class="form">
+      <h2>Ingrese su nombre de usuario:</h2>
+      <input type="text" id="nombre-usuario" placeholder="Nombre de Usuario">
+      <br>
+      <h2>Ingrese su comentario:</h2>
+      <textarea id="comentario" rows="4" cols="50"></textarea>
+      <br/>
+      <button onclick="enviarComentario()">Enviar Comentario</button>
+    </div>
+    <div class="comments">
+      <h2>Comentarios de Usuarios:</h2>
+      <div id="comentarios-container"></div>
+    </div>
+  </div>
 </body>
 </html>
